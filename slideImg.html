@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>幻灯片演示</title>
+		<link type="text/css" rel="stylesheet" href="css/index.css">
+		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	</head>
+<body>
+<div style="margin:50px auto; width:500px;">演示：<span id="fixie67"></span>
+	<div id="fla_focus">
+		<div class="imgb"><img target="_blank" onclick="location.href='#'" cont="这是一个很好玩很火爆的活动哦，大家快来参加吧！！！参与还有礼品拿！" title="第一个推荐活动" alt="" src="img/1.jpg" /><img target="_blank" onclick="location.href='#'" cont="这第二个很好玩很火爆的活动哦，大家快来参加吧！！！参与还有礼品拿！" title="第二个推荐活动" alt="" src="img/2.jpg" /><img target="_blank" onclick="location.href='#'" cont="这第三个很好玩很火爆的活动哦，大家快来参加吧！！！参与还有礼品拿！" title="第三个推荐活动" alt="" src="img/3.jpg" /><img target="_blank" onclick="location.href='#'" cont="这第四个很好玩很火爆的活动哦，大家快来参加吧！！！参与还有礼品拿！" title="第四个推荐活动" alt="" src="img/4.jpg"><img target="_blank" onclick="location.href='#'" cont="这第五个很好玩很火爆的活动哦，大家快来参加吧！！！参与还有礼品拿！" title="第五个推荐活动" alt="" src="img/5.jpg" />
+		</div>
+	</div>
+	第二个例子
+	<div id="slide2">
+		<div class="myname"><img title="aaa" src="images/01.jpg" alt="" /><img title="aaa" src="images/02.jpg" alt="" /><img title="aaa" src="images/03.jpg" alt="" /><img title="aaa" src="images/04.jpg" alt="" /><img title="aaa" src="images/05.jpg" alt="" /></div>
+		</div>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript" src="js/slide.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#fla_focus").ImgSlider();//全使用默认值
+	$("#slide2").ImgSlider({
+		hidePreview:true,//隐藏预览
+		hideCaptial:true,//隐藏标题
+		wrapWidth:696,//自定义宽度
+		wrapHeight:241,//自定义高度
+		interval:3000,//自定义切换间隔
+		wrapName:"myname"//自定义图片容易的class名
+	});
+});
+</script>
+</html>
