@@ -20,7 +20,8 @@
 </div>
 </body>
 
-<script type="text/javascript" src="js/slide.min.js"></script>
+<script type="text/javascript" src="js/slide.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 <script type="text/javascript">
 $(function(){
 	$("#fla_focus").ImgSlider();//全使用默认值
@@ -30,7 +31,8 @@ $(function(){
 		wrapWidth:696,//自定义宽度
 		wrapHeight:241,//自定义高度
 		interval:3000,//自定义切换间隔
-		wrapName:"myname"//自定义图片容易的class名
+		wrapName:"myname",//自定义图片容易的class名
+		effect:"easeOutElastic"//动画效果
 	});
 });
 </script>
