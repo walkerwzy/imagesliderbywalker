@@ -119,7 +119,7 @@
 			}
 					
 			//响应hover事件——预览图
-			$(".smallimgs",thisWrap).find(".imgs").live("mouseover",function(){
+			$(".smallimgs",this).find(".imgs").live("mouseover",function(){
 					var thisobj=$(this);
 					th=setTimeout(function(){
 					clearInterval(m);
@@ -129,7 +129,7 @@
 				},300);
 			});
 			
-			$(".smallimgs",thisWrap).find(".imgs").live("mouseout",function(){
+			$(".smallimgs",this).find(".imgs").live("mouseout",function(){
 				clearTimeout(th);
 				if(flag==1){
 					m=setInterval(imgscroll,options.interval);
@@ -139,11 +139,11 @@
 			});
 			
 			//响应hover事件——数字
-			$(".numNavi",thisWrap).find("span").live("mouseover",function(){
+			$(".numNavi",this).find("span").live("mouseover",function(){
 				var i=numNavis.index(this);//得到索引
 				$(".smallimgs",thisWrap).find(".imgs").eq(i).trigger("mouseover");
 			});
-			$(".numNavi",thisWrap).find("span").live("mouseout",function(){
+			$(".numNavi",this).find("span").live("mouseout",function(){
 				clearTimeout(th);
 				if(flag==1){
 					m=setInterval(imgscroll,options.interval);
