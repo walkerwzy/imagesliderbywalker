@@ -99,7 +99,7 @@
 				if(indexbefore+1==imgCollection.length){
 					if(i==0) bigImgWrap.css({marginLeft:0});//scroll fix
 				}
-				bigImgWrap.animate({marginLeft:options.wrapWidth*(-i-1)},options.speed);//移动大图
+				bigImgWrap.animate({marginLeft:options.wrapWidth*(-i-1)},options.speed,options.effect);//移动大图
 				//移动光标、高亮框
 				$(".highlight_img",thisWrap).removeClass("highlight_img");
 				var imgleft=options.arrPosition+i*70;
@@ -159,6 +159,7 @@
 		interval:5000,//切换间隔
 		arrPosition:-403,//预览图箭头初始位置 
 		hidePreview:false,//隐藏预览图，隐藏后会显示数字导航
-		hideCaptial:false//隐藏标题/介绍
+		hideCaptial:false,//隐藏标题/介绍
+		effect:"swing"//动画效果
     }
 })(jQuery);
