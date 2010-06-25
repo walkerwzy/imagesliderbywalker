@@ -26,12 +26,13 @@
 $(function(){
 	$("#fla_focus").ImgSlider();//全使用默认值
 	$("#slide2").ImgSlider({
-		hidePreview:true,//隐藏预览
+		hidePreview:false,//隐藏预览
 		hideCaptial:true,//隐藏标题
 		wrapWidth:696,//自定义宽度
 		wrapHeight:241,//自定义高度
 		interval:3000,//自定义切换间隔
 		wrapName:"myname",//自定义图片容易的class名
+		arrPosition:-383,//初始箭头位置
 		effect:"easeOutElastic"//动画效果
 	});
 });

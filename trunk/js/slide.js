@@ -102,7 +102,10 @@
 				bigImgWrap.animate({marginLeft:options.wrapWidth*(-i-1)},options.speed,options.effect);//移动大图
 				//移动光标、高亮框
 				$(".highlight_img",thisWrap).removeClass("highlight_img");
-				var imgleft=options.arrPosition+i*70;
+				var measureElement=imgPrev.eq(0);
+				var moveAmount=measureElement.width()+parseInt(measureElement.css("margin-left"))+parseInt(measureElement.css("margin-right"))+parseInt(measureElement.css("border-left-width"))+parseInt(measureElement.css("border-right-width"));
+				$("#fixie67").html(moveAmount);
+				var imgleft=options.arrPosition+i*moveAmount;
 				naviWrap.animate({backgroundPosition:imgleft+"px 0"},options.speed,function(){$(".imgs",thisWrap).eq(i).addClass("highlight_img");});
 				//移动数字导航
 				$(".current",naviNumWrap).removeClass("current");
