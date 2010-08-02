@@ -10,8 +10,8 @@
 // [作者网名] walkerwang
 // [邮    箱] walkerwzy@gmail.com
 // [作者博客] http://walkerwang.cnblogs.com
-// [更新日期] 2010-06-24
-// [版 本 号] ver1.0
+// [更新日期] 2010-08-02
+// [版 本 号] ver1.1.1
 //====================================================================================================
 (function($) {
     $.fn.ImgSlider = function(options) {
@@ -104,7 +104,7 @@
 				$(".highlight_img",thisWrap).removeClass("highlight_img");
 				var measureElement=imgPrev.eq(0);
 				var moveAmount=measureElement.width()+parseInt(measureElement.css("margin-left"))+parseInt(measureElement.css("margin-right"))+parseInt(measureElement.css("border-left-width"))+parseInt(measureElement.css("border-right-width"));
-				$("#fixie67").html(moveAmount);
+				//$("#fixie67").html(moveAmount);//测试用
 				var imgleft=options.arrPosition+i*moveAmount;
 				naviWrap.animate({backgroundPosition:imgleft+"px 0"},options.speed,function(){$(".imgs",thisWrap).eq(i).addClass("highlight_img");});
 				//移动数字导航
@@ -119,7 +119,7 @@
 			}
 					
 			//响应hover事件——预览图
-			$(".smallimgs",this).find(".imgs").live("mouseover",function(){
+			$(".smallimgs",thisWrap).find(".imgs").live("mouseover",function(){
 					var thisobj=$(this);
 					th=setTimeout(function(){
 					clearInterval(m);
@@ -129,7 +129,7 @@
 				},300);
 			});
 			
-			$(".smallimgs",this).find(".imgs").live("mouseout",function(){
+			$(".smallimgs",thisWrap).find(".imgs").live("mouseout",function(){
 				clearTimeout(th);
 				if(flag==1){
 					m=setInterval(imgscroll,options.interval);
@@ -139,11 +139,11 @@
 			});
 			
 			//响应hover事件——数字
-			$(".numNavi",this).find("span").live("mouseover",function(){
+			$(".numNavi",thisWrap).find("span").live("mouseover",function(){
 				var i=numNavis.index(this);//得到索引
 				$(".smallimgs",thisWrap).find(".imgs").eq(i).trigger("mouseover");
 			});
-			$(".numNavi",this).find("span").live("mouseout",function(){
+			$(".numNavi",thisWrap).find("span").live("mouseout",function(){
 				clearTimeout(th);
 				if(flag==1){
 					m=setInterval(imgscroll,options.interval);
