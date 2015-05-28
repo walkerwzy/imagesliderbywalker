@@ -1,0 +1,1 @@
+a image auto scroll plugin for jquery
